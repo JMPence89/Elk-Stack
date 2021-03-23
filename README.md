@@ -61,42 +61,7 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - Ansible can be run from the command line without the use of configuration files for simple tasks to trigger updates across several VM's at once.
 
-The playbook implements the following tasks:
-Playbook 1: my_playbook.yml   (/etc/ansible/my_playbook)
-	This playbook installs Docker and configures a VM with the DVWA web app by:
-	  - Installs Docker.io
-	  - Installs Python3-pip
-	  - Installs Docker Python
-	  - Uses the Docker Container to install cyberxsecurity/dvwa container using port 80.
-	  - Starts Docker on VM start up.
-Playbook 2: install-elk.yml    (/etc/ansible/install-elk.yml)
-	This playbook configures the ELK server by:
-	  - Sets the vm.max_map_count to 262144		(Allows the target VM to use more memory in order to run the ELK container.)
-	  - Installs docker.io
-	  - Installs Python3-pip
-	  - Installs Docker Python
-	  - Downloads the Docker container sebp/elk:761
-	  - Configures the container to start with the following port mappings:
-		-5601:5601
-		-9200:9200
-		-5044:5044
-	  - Starts the Container
-Playbook 3: filebeat-playbook.yaml	(/etc/ansible/roles/filebeat-playbook.yml)
-	This playbook installs filebeat and then copies the filebeat configuration file, just made, to the correct location by:
-	  - Downloads the Filebeat .deb file
-	  - Installs the .deb file using dpkg command: dpkg -i filebeat-7.4.0-amd64.deb
-	  - Copies Filebeat config files from Ansible container to Web-1 & Web-2.     Location: /etc/filebeat/filebeat.yml
-	  - Runs the following commands:
-		-filebeat modules enable system		(enable and configure system module)
-		-filebeat setup				(set up filebeat)
-		-service filebeat start			(start filebeat service)
-Playbook 4: metricbeat-playbook.yml	(/etc/ansible/roles/metricbeat-playbook.yml
-	  - Downloads the Metricbeat .deb file
-	  - Installs the .deb file using the .deb command.
-	  - Copies Metricbeat config files from Asible container to Web-1 & Web 2.	Location: /etc/metricbeat/metricbeat.yml
-		-metricbeat modules enable docker	(enable and configure system module)
-		-metricbeat setup			(set up metricbeat)
-		-service metricbeat start		(start metricnbeat service) 
+![](https://github.com/JMPence89/Elk-Stack/blob/main/Playbook_tasks.png)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
