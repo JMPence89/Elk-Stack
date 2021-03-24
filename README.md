@@ -101,13 +101,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook file to Ansible Container.
 - Update the hosts file to include...		(/etc/ansible/hosts)
- 	 
-	  [webservers]
-	10.0.0.7 ansible_python_interpreter=/usr/bin/python3
-	10.0.0.8 ansible_python_interpreter=/usr/bin/python3
 
- 	  [elk]
-	10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+![](https://github.com/JMPence89/Elk-Stack/blob/main/hosts_file.png)
      
 - Run the playbook, and navigate to /etc/ansible to check that the installation worked as expected.
 
