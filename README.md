@@ -114,3 +114,6 @@ SSH into the control node and follow the steps below:
 
 http://104.42.155.151:5601/app/kibana		(ELK VM must be running in order to access)
 
+![](https://github.com/JMPence89/Elk-Stack/blob/main/Filebeat_Metricbeat_Screenshots/Filebeat.png)
+
+![](https://github.com/JMPence89/Elk-Stack/blob/main/Filebeat_Metricbeat_Screenshots/Metricbeat.png)
