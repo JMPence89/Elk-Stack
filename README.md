@@ -106,14 +106,11 @@ SSH into the control node and follow the steps below:
      
 - Run the playbook, and navigate to /etc/ansible to check that the installation worked as expected.
 
-###To run playbooks:
-SSH into your Jump Box Provisioner:
-    	ssh admin@168.62.48.156
-Start Docker and attach into it:
-  	sudo docker start condescending_blackburn	(condescending_blackburn is the name of my container)
-	sudo docker attach condescending_blackburn
-Run Playbooks:
-	ansible-playbook /etc/ansible/my_playbook.yml
-	ansible-playbook /etc/ansible/install-elk.yml
-	ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
-	ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml
+### To run playbooks:
+
+![](https://github.com/JMPence89/Elk-Stack/blob/main/Deployment_commands.png)
+
+### To access Kibana along with Filebeats and Metricbeats:
+
+http://104.42.155.151:5601/app/kibana		(ELK VM must be running in order to access)
+
